@@ -40,7 +40,7 @@ export default () => {
         subheading={<Subheading>Established Since 2014</Subheading>}
         heading={
           <>
-            We've been serving for
+            We've been working for
             <wbr /> <HighlightedText>over 5 years.</HighlightedText>
           </>
         }
@@ -58,7 +58,7 @@ export default () => {
         textOnLeft={false}
         primaryButtonText="Latest Offers"
         imageSrc={
-          "https://images.unsplash.com/photo-1460306855393-0410f61241c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+          "https://www.euro-dance-festival.com/wp-content/uploads/2023/02/EDF-23-Tiago-Emilia.jpg"
         }
         imageCss={imageCss}
         imageDecoratorBlob={true}
@@ -68,7 +68,7 @@ export default () => {
       <TabGrid
         heading={
           <>
-            Checkout our <HighlightedText>menu.</HighlightedText>
+            Checkout our <HighlightedText>classes</HighlightedText>
           </>
         }
       />

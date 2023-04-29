@@ -59,93 +59,58 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  heading = "Checkout the Menu",
+  heading = "Checkout our classes",
   tabs = {
-    Starters: [
-      {
+    Basic: [{
         imageSrc:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Veg Mixer",
-        content: "Tomato Salad & Carrot",
-        price: "$5.99",
+          "https://static.wixstatic.com/media/c32add_eda5cec34e8044998f09717399dc3d05~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Beginners.png",
+        title: "Beginners Bootcamp",
+        content: "explaining the movement and 5 different variations",
+        price: "€110.00",
         rating: "5.0",
         reviews: "87",
         url: "#"
       },
       {
         imageSrc:
-          "https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Macaroni",
-        content: "Cheese Pizza",
-        price: "$2.99",
+          "https://static.wixstatic.com/media/c32add_e510a1c05b4f415189ffb7d76d3b8e30~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Sarrada.png",
+        title: "Sarrada",
+        content: "Full course explaining the movement and 5 different variations",
+        price: "€110.00",
         rating: "4.8",
         reviews: "32",
         url: "#"
-      },
-      {
+      },{
         imageSrc:
-          "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Nelli",
-        content: "Hamburger & Fries",
-        price: "$7.99",
-        rating: "4.9",
-        reviews: "89",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Jalapeno Poppers",
-        content: "Crispy Soyabeans",
-        price: "$8.99",
-        rating: "4.6",
-        reviews: "12",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Cajun Chicken",
-        content: "Roasted Chicken & Egg",
-        price: "$7.99",
-        rating: "4.2",
-        reviews: "19",
-        url: "#"
-      },
-      {
-        imageSrc:
-          "https://images.unsplash.com/photo-1550461716-dbf266b2a8a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Chillie Cake",
-        content: "Deepfried Chicken",
-        price: "$2.99",
+          "https://static.wixstatic.com/media/c32add_63bb6107f5ee49abbdeaf67c1c54b32c~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cambre.png",
+        title: "Cambre",
+        content: "Right technique, different entries and exits and a full fitness workout",
+        price: "€110.00",
         rating: "5.0",
-        reviews: "61",
+        reviews: "87",
         url: "#"
       },
       {
         imageSrc:
-          "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Guacamole Mex",
-        content: "Mexican Chilli",
-        price: "$3.99",
-        rating: "4.2",
-        reviews: "95",
+          "https://static.wixstatic.com/media/c32add_d5231546b3834a92b15f3f5fe10129a9~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Bal%C3%A3o.png",
+        title: "Balao Apagado",
+        content: "Learn how to use your headmovements in the basic balão apagado and variations of it!",
+        price: "€110.00",
+        rating: "4.8",
+        reviews: "32",
         url: "#"
-      },
-      {
+      },{
         imageSrc:
-          "https://images.unsplash.com/photo-1565310022184-f23a884f29da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-        title: "Carnet Nachos",
-        content: "Chilli Crispy Nachos",
-        price: "$3.99",
-        rating: "3.9",
-        reviews: "26",
+          "https://static.wixstatic.com/media/c32add_87dd054f923e41a9b680b12578d39210~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Toalha.png",
+        title: "Toalha",
+        content: "We explain the technique using solo and partner work and show different variations",
+        price: "€110.00",
+        rating: "5.0",
+        reviews: "87",
         url: "#"
-      }
-    ],
-    Main: getRandomCards(),
-    Soup: getRandomCards(),
-    Desserts: getRandomCards()
+      }],
+    Intermediate: getRandomCards(),
+    Advanced: getRandomCards()
   }
 }) => {
   /*
@@ -238,82 +203,50 @@ const getRandomCards = () => {
   const cards = [
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Chicken Chilled",
-      content: "Chicken Main Course",
-      price: "$5.99",
+        "https://static.wixstatic.com/media/c32add_eda5cec34e8044998f09717399dc3d05~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Beginners.png",
+      title: "Beginners Bootcamp",
+      content: "explaining the movement and 5 different variations",
+      price: "€110.00",
       rating: "5.0",
       reviews: "87",
       url: "#"
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1582254465498-6bc70419b607?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Samsa Beef",
-      content: "Fried Mexican Beef",
-      price: "$3.99",
-      rating: "4.5",
-      reviews: "34",
+        "https://static.wixstatic.com/media/c32add_e510a1c05b4f415189ffb7d76d3b8e30~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Sarrada.png",
+      title: "Sarrada",
+      content: "Full course explaining the movement and 5 different variations",
+      price: "€110.00",
+      rating: "4.8",
+      reviews: "32",
       url: "#"
-    },
-    {
+    },{
       imageSrc:
-        "https://images.unsplash.com/photo-1565310022184-f23a884f29da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Carnet Nachos",
-      content: "Chilli Crispy Nachos",
-      price: "$3.99",
-      rating: "3.9",
-      reviews: "26",
-      url: "#"
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Guacamole Mex",
-      content: "Mexican Chilli",
-      price: "$3.99",
-      rating: "4.2",
-      reviews: "95",
-      url: "#"
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1550461716-dbf266b2a8a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Chillie Cake",
-      content: "Deepfried Chicken",
-      price: "$2.99",
+        "https://static.wixstatic.com/media/c32add_63bb6107f5ee49abbdeaf67c1c54b32c~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cambre.png",
+      title: "Cambre",
+      content: "Right technique, different entries and exits and a full fitness workout",
+      price: "€110.00",
       rating: "5.0",
-      reviews: "61",
+      reviews: "87",
       url: "#"
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327??ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Nelli",
-      content: "Hamburger & Fries",
-      price: "$7.99",
-      rating: "4.9",
-      reviews: "89",
+        "https://static.wixstatic.com/media/c32add_d5231546b3834a92b15f3f5fe10129a9~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Bal%C3%A3o.png",
+      title: "Balao Apagado",
+      content: "Learn how to use your headmovements in the basic balão apagado and variations of it!",
+      price: "€110.00",
+      rating: "4.8",
+      reviews: "32",
       url: "#"
-    },
-    {
+    },{
       imageSrc:
-        "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Jalapeno Poppers",
-      content: "Crispy Soyabeans",
-      price: "$8.99",
-      rating: "4.6",
-      reviews: "12",
-      url: "#"
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1473093226795-af9932fe5856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
-      title: "Cajun Chicken",
-      content: "Roasted Chicken & Egg",
-      price: "$7.99",
-      rating: "4.2",
-      reviews: "19",
+        "https://static.wixstatic.com/media/c32add_87dd054f923e41a9b680b12578d39210~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Toalha.png",
+      title: "Toalha",
+      content: "We explain the technique using solo and partner work and show different variations",
+      price: "€110.00",
+      rating: "5.0",
+      reviews: "87",
       url: "#"
     }
   ];
