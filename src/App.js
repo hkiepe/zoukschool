@@ -91,9 +91,9 @@ import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 // import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
 
 /* Inner Pages */
-// import LoginPage from "pages/Login.js";
-// import SignupPage from "pages/Signup.js";
-// import PricingPage from "pages/Pricing.js";
+import LoginPage from "pages/Login.js";
+import SignupPage from "pages/Signup.js";
+import PricingPage from "pages/Pricing.js";
 // import AboutUsPage from "pages/AboutUs.js";
 import ContactUsPage from "pages/ContactUs.js";
 // import BlogIndexPage from "pages/BlogIndex.js";
@@ -104,27 +104,29 @@ import ComponentRenderer from "ComponentRenderer.js";
 // import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <p>Hello</p>,
-    children: [
-      {
-        path: "thank-you",
-        element: <p>Thank you</p>,
-      },
-      {
-        path: "contact",
-        element: <ContactUsPage />,
-      },
-    ],
+    element: <RestaurantLandingPage />,
+    children: [],
+  },
+  {
+    path: "thank-you",
+    element: <ThankYouPage />,
+  },
+  {
+    path: "contact",
+    element: <ContactUsPage />,
+  },
+  {
+    path: "login",
+    element: <LoginPage />,
+  },
+  {
+    path: "signup",
+    element: <SignupPage />,
   },
 ]);
 

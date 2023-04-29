@@ -23,13 +23,18 @@ export default () => {
   return (
     <AnimationRevealPage>
       <Hero
-        heading={<>Delicious & Affordable <HighlightedText>Meals Near You.</HighlightedText></>}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        imageSrc="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        heading={
+          <>
+            Improve & Develope with{" "}
+            <HighlightedText>Online Dance Classes</HighlightedText>
+          </>
+        }
+        description="Take responsibility for Your Dance style. Training and practice is the secret for growth into your dance. Improve your dance, develop your skills and experience great dance classes in the comfort of your home."
+        imageSrc="https://static.wixstatic.com/media/c32add_d3e70ab3e99e4c3aaa49c69b1f753058~mv2.jpg/v1/fill/w_746,h_681,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/20220326-6L7A0014_edited.jpg"
         imageCss={imageCss}
         imageDecoratorBlob={true}
-        primaryButtonText="Order Now"
-        watchVideoButtonText="Meet The Chefs"
+        primaryButtonText="Start Today"
+        watchVideoButtonText="Meet Your Trainers"
       />
       <MainFeature
         subheading={<Subheading>Established Since 2014</Subheading>}
@@ -41,11 +46,12 @@ export default () => {
         }
         description={
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
             <br />
             <br />
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
           </Description>
         }
         buttonRounded={false}
@@ -77,28 +83,31 @@ export default () => {
             imageSrc: shopIconImageSrc,
             title: "230+ Locations",
             description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://google.com"
+            url: "https://google.com",
           },
           {
             imageSrc: chefIconImageSrc,
             title: "Professional Chefs",
             description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://timerse.com"
+            url: "https://timerse.com",
           },
           {
             imageSrc: celebrationIconImageSrc,
             title: "Birthday Catering",
             description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://reddit.com"
-          }
+            url: "https://reddit.com",
+          },
         ]}
-
         imageContainerCss={tw`p-2!`}
         imageCss={tw`w-20! h-20!`}
       />
       <MainFeature2
         subheading={<Subheading>A Reputed Brand</Subheading>}
-        heading={<>Why <HighlightedText>Choose Us ?</HighlightedText></>}
+        heading={
+          <>
+            Why <HighlightedText>Choose Us ?</HighlightedText>
+          </>
+        }
         statistics={[
           {
             key: "Orders",
@@ -106,12 +115,12 @@ export default () => {
           },
           {
             key: "Customers",
-            value: "11000+"
+            value: "11000+",
           },
           {
             key: "Chefs",
-            value: "1500+"
-          }
+            value: "1500+",
+          },
         ]}
         primaryButtonText="Order Now"
         primaryButtonUrl="https://order.now.com"
@@ -125,12 +134,21 @@ export default () => {
       />
       <Testimonial
         subheading=""
-        heading={<>Customers <HighlightedText>Love Us.</HighlightedText></>}
+        heading={
+          <>
+            Customers <HighlightedText>Love Us.</HighlightedText>
+          </>
+        }
       />
       <DownloadApp
-        text={<>People around you are ordering delicious meals using the <HighlightedTextInverse>Treact App.</HighlightedTextInverse></>}
+        text={
+          <>
+            People around you are ordering delicious meals using the{" "}
+            <HighlightedTextInverse>Treact App.</HighlightedTextInverse>
+          </>
+        }
       />
       <Footer />
     </AnimationRevealPage>
   );
-}
+};
