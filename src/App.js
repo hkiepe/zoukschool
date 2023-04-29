@@ -104,16 +104,21 @@ import ComponentRenderer from "ComponentRenderer.js";
 // import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RestaurantLandingPage />,
+    element: <p>Hello</p>,
     children: [
       {
         path: "thank-you",
-        element: <ThankYouPage />,
+        element: <p>Thank you</p>,
       },
       {
         path: "contact",
