@@ -46,7 +46,7 @@ export default ({
       We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "We have a lot of experience in teaching zouk classes on workshops and events all over the world. We are constantly working on developing our dance style and work together with many advanced teachers to develop our methodology of how to teach.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,

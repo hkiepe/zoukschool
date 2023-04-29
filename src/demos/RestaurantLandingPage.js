@@ -75,27 +75,27 @@ export default () => {
       <Features
         heading={
           <>
-            Amazing <HighlightedText>Services.</HighlightedText>
+            Outstanding <HighlightedText>Services.</HighlightedText>
           </>
         }
         cards={[
           {
             imageSrc: shopIconImageSrc,
-            title: "230+ Locations",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://google.com",
+            title: "Online Courses",
+            description: "Learn Zouk from the beginning in the comfort of your home!",
+            url: "https://#",
           },
           {
             imageSrc: chefIconImageSrc,
-            title: "Professional Chefs",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://timerse.com",
+            title: "Workshops",
+            description: "Teaching service in your city or school all over the world!",
+            url: "https://#",
           },
           {
             imageSrc: celebrationIconImageSrc,
-            title: "Birthday Catering",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://reddit.com",
+            title: "Private Classes",
+            description: "Intensive training with more focus on you and your dance. ",
+            url: "https://#",
           },
         ]}
         imageContainerCss={tw`p-2!`}
@@ -118,14 +118,14 @@ export default () => {
             value: "11000+",
           },
           {
-            key: "Chefs",
+            key: "Worksops",
             value: "1500+",
           },
         ]}
         primaryButtonText="Order Now"
-        primaryButtonUrl="https://order.now.com"
+        primaryButtonUrl="https://#"
         imageInsideDiv={false}
-        imageSrc="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzNzI2fQ&auto=format&fit=crop&w=768&q=80"
+        imageSrc="https://static.wixstatic.com/media/c32add_d3e70ab3e99e4c3aaa49c69b1f753058~mv2.jpg/v1/fill/w_560,h_512,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/20220326-6L7A0014_edited.jpg"
         imageCss={Object.assign(tw`bg-cover`, imageCss)}
         imageContainerCss={tw`md:w-1/2 h-auto`}
         imageDecoratorBlob={true}
@@ -140,14 +140,14 @@ export default () => {
           </>
         }
       />
-      <DownloadApp
+      {/* <DownloadApp
         text={
           <>
             People around you are ordering delicious meals using the{" "}
             <HighlightedTextInverse>Treact App.</HighlightedTextInverse>
           </>
         }
-      />
+      /> */}
       <Footer />
     </AnimationRevealPage>
   );
