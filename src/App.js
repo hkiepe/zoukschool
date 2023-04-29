@@ -93,18 +93,18 @@ import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 /* Inner Pages */
 import LoginPage from "pages/Login.js";
 import SignupPage from "pages/Signup.js";
-import PricingPage from "pages/Pricing.js";
+// import PricingPage from "pages/Pricing.js";
 // import AboutUsPage from "pages/AboutUs.js";
 import ContactUsPage from "pages/ContactUs.js";
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-import ComponentRenderer from "ComponentRenderer.js";
+// import ComponentRenderer from "ComponentRenderer.js";
 // import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
