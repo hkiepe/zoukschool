@@ -1,6 +1,5 @@
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithVideo.js";
 import Features from "components/features/ThreeColSimple.js";
 import MainFeature from "components/features/TwoColWithButton.js";
@@ -8,6 +7,7 @@ import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 // import DownloadApp from "components/cta/DownloadApp.js";
+import Header from "../components/headers/light";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 
 import chefIconImageSrc from "images/chef-icon.svg";
@@ -21,7 +21,7 @@ export default () => {
   const Description = tw.span`inline-block mt-8`;
   const imageCss = tw`rounded-4xl`;
   return (
-    <AnimationRevealPage>
+    <>
       <Hero
         heading={
           <>
@@ -147,8 +147,6 @@ export default () => {
             <HighlightedTextInverse>Treact App.</HighlightedTextInverse>
           </>
         }
-      /> */}
-      <Footer />
-    </AnimationRevealPage>
+      /> */}</>
   );
 };

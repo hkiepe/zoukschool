@@ -104,29 +104,50 @@ import ContactUsPage from "pages/ContactUs.js";
 // import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
+import Main from "./layouts/Main";
+
+const testRouter = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Main />}>
+      <Route index element={<p>Home</p>} />
+      <Route path="test" element={<p>Test</p>} />
+    </Route>
+  )
+);
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RestaurantLandingPage />,
-    children: [],
-  },
-  {
-    path: "thank-you",
-    element: <ThankYouPage />,
-  },
-  {
-    path: "contact",
-    element: <ContactUsPage />,
-  },
-  {
-    path: "login",
-    element: <LoginPage />,
-  },
-  {
-    path: "signup",
-    element: <SignupPage />,
+    element: <Main />,
+    children: [
+      {
+        index: true,
+        element: <RestaurantLandingPage />,
+      },
+      {
+        path: "thank-you",
+        element: <ThankYouPage />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUsPage />,
+      },
+      {
+        path: "login",
+        element: <LoginPage />,
+      },
+      {
+        path: "signup",
+        element: <SignupPage />,
+      },
+    ],
   },
 ]);
 

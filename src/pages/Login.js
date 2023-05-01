@@ -1,5 +1,4 @@
 import React from "react";
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { Container as ContainerBase } from "components/misc/Layouts";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -9,8 +8,6 @@ import logo from "images/logo.svg";
 import googleIconImageSrc from "images/google-icon.png";
 import twitterIconImageSrc from "images/twitter-icon.png";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
-import Header from "components/headers/light.js";
-import Footer from "components/footers/FiveColumnWithInputForm.js";
 
 const Container = tw(
   ContainerBase
@@ -78,8 +75,6 @@ export default ({
   forgotPasswordUrl = "#",
   signupUrl = "#",
 }) => (
-  <AnimationRevealPage>
-    <Header />
     <Container>
       <Content>
         <MainContainer>
@@ -136,6 +131,4 @@ export default ({
         </IllustrationContainer>
       </Content>
     </Container>
-    <Footer />
-  </AnimationRevealPage>
 );

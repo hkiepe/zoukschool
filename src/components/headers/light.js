@@ -81,11 +81,11 @@ export default ({
       <NavLink href="/#">About</NavLink>
       <NavLink href="/#">Blog</NavLink>
       <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/contact">Contact Us</NavLink>
-      <NavLink href="/login" tw="lg:ml-12!">
+      <NavLink href="contact">Contact Us</NavLink>
+      <NavLink href="login" tw="lg:ml-12!">
         Login
       </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/signup">
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="signup">
         Sign Up
       </PrimaryLink>
     </NavLinks>,

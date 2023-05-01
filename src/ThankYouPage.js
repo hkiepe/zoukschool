@@ -1,5 +1,4 @@
 import React from "react";
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { Container, Content2Xl } from "components/misc/Layouts";
 import tw from "twin.macro";
 // eslint-disable-next-line
@@ -41,29 +40,8 @@ export default () => {
   }, [])
 
   return (
-    <AnimationRevealPage disabled>
       <Container tw="-mx-8 -mt-8 pt-8 px-8">
         <Content2Xl>
-          <NavRow>
-            <LogoLink href="/">
-              <img src={logo} alt="" />
-              Treact
-            </LogoLink>
-            <div tw="flex flex-col lg:flex-row items-center">
-              <NavLink target="_blank" href="https://owaiskhan.me/post/free-tailwindcss-react-ui-kit">
-                License & Usage
-              </NavLink>
-              <NavLink target="_blank" href="https://twitter.com/owaiswiz">
-                Twitter
-              </NavLink>
-              <NavLink target="_blank" href="https://owaiskhan.me">
-                Who Am I ?
-              </NavLink>
-              <PrimaryNavLink target="_blank" href="https://gum.co/QaruQ">
-                Download Now
-              </PrimaryNavLink>
-            </div>
-          </NavRow>
           <HeroRow>
             <Heading>Thank You!</Heading>
             <Description tw="mt-12">Your Download Will Begin Shortly. If it does not, <NavLink href={downloadUrl} download>click this link</NavLink>.</Description>
@@ -98,6 +76,5 @@ export default () => {
           </HeroRow>
         </Content2Xl>
       </Container>
-    </AnimationRevealPage>
   );
 };

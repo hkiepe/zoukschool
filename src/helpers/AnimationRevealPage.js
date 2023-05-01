@@ -60,6 +60,6 @@ function AnimatedSlideInComponent({
 
 export default (props) => (
   <StyledDiv className="App">
-    <AnimationReveal disabled {...props} />
+    <AnimationReveal enabled {...props} />
   </StyledDiv>
 );
