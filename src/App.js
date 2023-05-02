@@ -50,7 +50,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import SliderCard from "components/cards/ThreeColSlider.js";
 // import TrendingCard from "components/cards/TwoTrendingPreviewCardsWithImage.js";
 // import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
-// import TabGrid from "components/cards/TabCardGrid.js";
+import TabGrid from "components/cards/TabCardGrid.js";
 
 // import Blog from "components/blogs/ThreeColSimpleWithImage.js";
 // import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
@@ -111,16 +111,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+// layouts
 import Main from "./layouts/Main";
-
-const testRouter = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Main />}>
-      <Route index element={<p>Home</p>} />
-      <Route path="test" element={<p>Test</p>} />
-    </Route>
-  )
-);
+import TutorialsLayout from "./layouts/TutorialsLayout";
 
 const router = createBrowserRouter([
   {
@@ -146,6 +139,16 @@ const router = createBrowserRouter([
       {
         path: "signup",
         element: <SignupPage />,
+      },
+      {
+        path: "tutorials",
+        element: <TutorialsLayout />,
+        children: [
+          {
+            index: true,
+            element: <TabGrid />,
+          },
+        ],
       },
     ],
   },
