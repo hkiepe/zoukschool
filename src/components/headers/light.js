@@ -97,7 +97,7 @@ export default ({
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src={logo} alt="logo" />
+      {/*<img src={logo} alt="logo" />*/}
       ZoukSchool
     </LogoLink>
   );

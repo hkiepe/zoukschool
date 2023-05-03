@@ -36,7 +36,7 @@ const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 export default ({
   subheading = "Contact Us",
   heading = <>Feel free to <span tw="text-primary-500">get in touch</span><wbr/> with us.</>,
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "We created an easy form for you to get in contact with us, either if you have questions or a message for us, or if you want to book us for teaching. Fill it out and hit send, then we can get back to you as fast as possible. See you soon!",
   submitButtonText = "Send",
   formAction = "#",
   formMethod = "get",
