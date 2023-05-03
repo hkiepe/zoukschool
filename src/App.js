@@ -106,8 +106,6 @@ import ThankYouPage from "ThankYouPage.js";
 
 import {
   createBrowserRouter,
-  createRoutesFromElements,
-  Route,
   RouterProvider,
 } from "react-router-dom";
 

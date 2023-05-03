@@ -80,19 +80,19 @@ export default () => {
         }
         cards={[
           {
-            imageSrc: shopIconImageSrc,
+            //imageSrc: shopIconImageSrc,
             title: "Online Courses",
             description: "Learn Zouk from the beginning in the comfort of your home!",
             url: "https://#",
           },
           {
-            imageSrc: chefIconImageSrc,
+            // imageSrc: chefIconImageSrc,
             title: "Workshops",
             description: "Teaching service in your city or school all over the world!",
             url: "https://#",
           },
           {
-            imageSrc: celebrationIconImageSrc,
+            // imageSrc: celebrationIconImageSrc,
             title: "Private Classes",
             description: "Intensive training with more focus on you and your dance. ",
             url: "https://#",
