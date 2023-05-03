@@ -55,31 +55,31 @@ const IllustrationImage = styled.div`
 `;
 
 export default ({
-  logoLinkUrl = "#",
+  logoLinkUrl = "/",
   illustrationImageSrc = illustration,
-  headingText = "Sign In To Treact",
+  headingText = "Sign In To ZoukSchool",
   socialButtons = [
-    {
+    /*{
       iconImageSrc: googleIconImageSrc,
       text: "Sign In With Google",
       url: "https://google.com",
-    },
-    {
+    },*/
+    /*{
       iconImageSrc: twitterIconImageSrc,
       text: "Sign In With Twitter",
       url: "https://twitter.com",
-    },
+    },*/
   ],
   submitButtonText = "Sign In",
   SubmitButtonIcon = LoginIcon,
   forgotPasswordUrl = "#",
-  signupUrl = "#",
+  signupUrl = "signup",
 }) => (
     <Container>
       <Content>
         <MainContainer>
           <LogoLink href={logoLinkUrl}>
-            <LogoImage src={logo} />
+            {/*<LogoImage src={logo} />*/}
           </LogoLink>
           <MainContent>
             <Heading>{headingText}</Heading>
@@ -99,7 +99,7 @@ export default ({
                 ))}
               </SocialButtonsContainer>
               <DividerTextContainer>
-                <DividerText>Or Sign in with your e-mail</DividerText>
+                <DividerText>Sign in with your e-mail and password</DividerText>
               </DividerTextContainer>
               <Form>
                 <Input type="email" placeholder="Email" />

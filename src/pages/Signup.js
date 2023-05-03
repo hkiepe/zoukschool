@@ -53,11 +53,11 @@ const IllustrationImage = styled.div`
 `;
 
 export default ({
-  logoLinkUrl = "#",
+  logoLinkUrl = "/",
   illustrationImageSrc = illustration,
-  headingText = "Sign Up For Treact",
+  headingText = "Sign Up For ZoukSchool",
   socialButtons = [
-    {
+    /*{
       iconImageSrc: googleIconImageSrc,
       text: "Sign Up With Google",
       url: "https://google.com"
@@ -66,24 +66,24 @@ export default ({
       iconImageSrc: twitterIconImageSrc,
       text: "Sign Up With Twitter",
       url: "https://twitter.com"
-    }
+    }*/
   ],
   submitButtonText = "Sign Up",
   SubmitButtonIcon = SignUpIcon,
   tosUrl = "#",
   privacyPolicyUrl = "#",
-  signInUrl = "#"
+  signInUrl = "login"
 }) => (
     <Container>
       <Content>
         <MainContainer>
-          <LogoLink href={logoLinkUrl}>
+          {/*<LogoLink href={logoLinkUrl}>
             <LogoImage src={logo} />
-          </LogoLink>
+</LogoLink>*/}
           <MainContent>
             <Heading>{headingText}</Heading>
             <FormContainer>
-              <SocialButtonsContainer>
+              {/*<SocialButtonsContainer>
                 {socialButtons.map((socialButton, index) => (
                   <SocialButton key={index} href={socialButton.url}>
                     <span className="iconContainer">
@@ -92,9 +92,9 @@ export default ({
                     <span className="text">{socialButton.text}</span>
                   </SocialButton>
                 ))}
-              </SocialButtonsContainer>
+              </SocialButtonsContainer>*/}
               <DividerTextContainer>
-                <DividerText>Or Sign up with your e-mail</DividerText>
+                <DividerText>Sign up with your e-mail</DividerText>
               </DividerTextContainer>
               <Form>
                 <Input type="email" placeholder="Email" />
@@ -104,7 +104,7 @@ export default ({
                   <span className="text">{submitButtonText}</span>
                 </SubmitButton>
                 <p tw="mt-6 text-xs text-gray-600 text-center">
-                  I agree to abide by treact's{" "}
+                  I agree to abide by ZoukSchool's{" "}
                   <a href={tosUrl} tw="border-b border-gray-500 border-dotted">
                     Terms of Service
                   </a>{" "}
