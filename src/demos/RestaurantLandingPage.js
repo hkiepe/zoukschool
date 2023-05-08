@@ -6,6 +6,7 @@ import MainFeature from "components/features/TwoColWithButton.js";
 import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
+import ReactModalAdapter from "helpers/ReactModalAdapter";
 // import DownloadApp from "components/cta/DownloadApp.js";
 // import Header from "../components/headers/light";
 // import Footer from "components/footers/FiveColumnWithInputForm.js";
@@ -22,6 +23,7 @@ export default () => {
   const imageCss = tw`rounded-4xl`;
   return (
     <>
+    <ReactModalAdapter>Hello</ReactModalAdapter>
       <Hero
         heading={
           <>
