@@ -112,11 +112,13 @@ import {
 // layouts
 import Main from "./layouts/Main";
 import TutorialsLayout from "./layouts/TutorialsLayout";
+import Error from "components/error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
@@ -139,12 +141,17 @@ const router = createBrowserRouter([
         element: <SignupPage />,
       },
       {
-        path: "tutorials",
+        path: "courses",
         element: <TutorialsLayout />,
+        errorElement: <Error />,
         children: [
           {
             index: true,
             element: <TabGrid />,
+          },
+          {
+            path: ":courseId",
+            element: <p>Test</p>,
           },
         ],
       },
