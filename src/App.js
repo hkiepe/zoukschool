@@ -104,13 +104,11 @@ import ContactUsPage from "pages/ContactUs.js";
 // import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+// rrd imports
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // layouts
-import Main,{ mainLoader } from "./layouts/Main";
+import Main, { mainLoader } from "./layouts/Main";
 import TutorialsLayout from "./layouts/TutorialsLayout";
 import Error from "components/error/Error";
 

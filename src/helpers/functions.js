@@ -13,7 +13,6 @@ export const fetchCourseData = async () => {
     });
     return courseData;
   } catch (error) {
-    console.log("Hello");
     throw new Error("There was a problem fetching the movies from database");
   }
 };

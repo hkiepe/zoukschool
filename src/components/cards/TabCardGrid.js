@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -9,6 +9,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+import CourseContext from "../../components/store/course-context";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -19,15 +20,22 @@ const TabControl = styled.div`
   &:hover {
     ${tw`bg-gray-300 text-gray-700`}
   }
-  ${props => props.active && tw`bg-primary-500! text-gray-100!`}
+  ${(props) => props.active && tw`bg-primary-500! text-gray-100!`}
   }
 `;
 
-const TabContent = tw(motion.div)`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
+const TabContent = tw(
+  motion.div
+)`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
 const CardContainer = tw.div`mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12`;
-const Card = tw(motion.a)`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0`;
+const Card = tw(
+  motion.a
+)`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0`;
 const CardImageContainer = styled.div`
-  ${props => css`background-image: url("${props.imageSrc}");`}
+  ${(props) =>
+    css`
+      background-image: url("${props.imageSrc}");
+    `}
   ${tw`h-56 xl:h-64 bg-center bg-cover relative rounded-t`}
 `;
 const CardRatingContainer = tw.div`leading-none absolute inline-flex bg-gray-100 bottom-0 left-0 ml-4 mb-4 rounded-full px-5 py-2 items-end`;
@@ -61,7 +69,8 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 export default ({
   heading = "Checkout our classes",
   tabs = {
-    Basic: [{
+    Basic: [
+      {
         imageSrc:
           "https://static.wixstatic.com/media/c32add_eda5cec34e8044998f09717399dc3d05~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Beginners.png",
         title: "Beginners Bootcamp",
@@ -69,50 +78,60 @@ export default ({
         price: "€110.00",
         rating: "5.0",
         reviews: "87",
-        url: "#"
+        url: "#",
       },
       {
         imageSrc:
           "https://static.wixstatic.com/media/c32add_e510a1c05b4f415189ffb7d76d3b8e30~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Sarrada.png",
         title: "Sarrada",
-        content: "Full course explaining the movement and 5 different variations",
+        content:
+          "Full course explaining the movement and 5 different variations",
         price: "€110.00",
         rating: "4.8",
         reviews: "32",
-        url: "#"
-      },{
+        url: "#",
+      },
+      {
         imageSrc:
           "https://static.wixstatic.com/media/c32add_63bb6107f5ee49abbdeaf67c1c54b32c~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cambre.png",
         title: "Cambre",
-        content: "Right technique, different entries and exits and a full fitness workout",
+        content:
+          "Right technique, different entries and exits and a full fitness workout",
         price: "€110.00",
         rating: "5.0",
         reviews: "87",
-        url: "#"
+        url: "#",
       },
       {
         imageSrc:
           "https://static.wixstatic.com/media/c32add_d5231546b3834a92b15f3f5fe10129a9~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Bal%C3%A3o.png",
         title: "Balao Apagado",
-        content: "Learn how to use your headmovements in the basic balão apagado and variations of it!",
+        content:
+          "Learn how to use your headmovements in the basic balão apagado and variations of it!",
         price: "€110.00",
         rating: "4.8",
         reviews: "32",
-        url: "#"
-      },{
+        url: "#",
+      },
+      {
         imageSrc:
           "https://static.wixstatic.com/media/c32add_87dd054f923e41a9b680b12578d39210~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Toalha.png",
         title: "Toalha",
-        content: "We explain the technique using solo and partner work and show different variations",
+        content:
+          "We explain the technique using solo and partner work and show different variations",
         price: "€110.00",
         rating: "5.0",
         reviews: "87",
-        url: "#"
-      }],
+        url: "#",
+      },
+    ],
     Intermediate: getRandomCards(),
-    Advanced: getRandomCards()
-  }
+    Advanced: getRandomCards(),
+  },
 }) => {
+  const ctx = useContext(CourseContext);
+  console.log("ctx", ctx);
+
   /*
    * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
    * as the key and value of the key will be its content (as an array of objects).
@@ -128,7 +147,11 @@ export default ({
           <Header>{heading}</Header>
           <TabsControl>
             {Object.keys(tabs).map((tabName, index) => (
-              <TabControl key={index} active={activeTab === tabName} onClick={() => setActiveTab(tabName)}>
+              <TabControl
+                key={index}
+                active={activeTab === tabName}
+                onClick={() => setActiveTab(tabName)}
+              >
                 {tabName}
               </TabControl>
             ))}
@@ -141,14 +164,14 @@ export default ({
             variants={{
               current: {
                 opacity: 1,
-                scale:1,
+                scale: 1,
                 display: "flex",
               },
               hidden: {
                 opacity: 0,
-                scale:0.8,
+                scale: 0.8,
                 display: "none",
-              }
+              },
             }}
             transition={{ duration: 0.4 }}
             initial={activeTab === tabKey ? "current" : "hidden"}
@@ -156,7 +179,13 @@ export default ({
           >
             {tabs[tabKey].map((card, index) => (
               <CardContainer key={index}>
-                <Card className="group" href={card.url} initial="rest" whileHover="hover" animate="rest">
+                <Card
+                  className="group"
+                  href={card.url}
+                  initial="rest"
+                  whileHover="hover"
+                  animate="rest"
+                >
                   <CardImageContainer imageSrc={card.imageSrc}>
                     <CardRatingContainer>
                       <CardRating>
@@ -169,12 +198,12 @@ export default ({
                       variants={{
                         hover: {
                           opacity: 1,
-                          height: "auto"
+                          height: "auto",
                         },
                         rest: {
                           opacity: 0,
-                          height: 0
-                        }
+                          height: 0,
+                        },
                       }}
                       transition={{ duration: 0.3 }}
                     >
@@ -209,7 +238,7 @@ const getRandomCards = () => {
       price: "€110.00",
       rating: "5.0",
       reviews: "87",
-      url: "#"
+      url: "#",
     },
     {
       imageSrc:
@@ -219,36 +248,41 @@ const getRandomCards = () => {
       price: "€110.00",
       rating: "4.8",
       reviews: "32",
-      url: "#"
-    },{
+      url: "#",
+    },
+    {
       imageSrc:
         "https://static.wixstatic.com/media/c32add_63bb6107f5ee49abbdeaf67c1c54b32c~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cambre.png",
       title: "Cambre",
-      content: "Right technique, different entries and exits and a full fitness workout",
+      content:
+        "Right technique, different entries and exits and a full fitness workout",
       price: "€110.00",
       rating: "5.0",
       reviews: "87",
-      url: "#"
+      url: "#",
     },
     {
       imageSrc:
         "https://static.wixstatic.com/media/c32add_d5231546b3834a92b15f3f5fe10129a9~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Bal%C3%A3o.png",
       title: "Balao Apagado",
-      content: "Learn how to use your headmovements in the basic balão apagado and variations of it!",
+      content:
+        "Learn how to use your headmovements in the basic balão apagado and variations of it!",
       price: "€110.00",
       rating: "4.8",
       reviews: "32",
-      url: "#"
-    },{
+      url: "#",
+    },
+    {
       imageSrc:
         "https://static.wixstatic.com/media/c32add_87dd054f923e41a9b680b12578d39210~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Toalha.png",
       title: "Toalha",
-      content: "We explain the technique using solo and partner work and show different variations",
+      content:
+        "We explain the technique using solo and partner work and show different variations",
       price: "€110.00",
       rating: "5.0",
       reviews: "87",
-      url: "#"
-    }
+      url: "#",
+    },
   ];
 
   // Shuffle array

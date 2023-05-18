@@ -7,6 +7,7 @@ import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 import ReactModalAdapter from "helpers/ReactModalAdapter";
+import { useLoaderData } from "react-router-dom";
 // import DownloadApp from "components/cta/DownloadApp.js";
 // import Header from "../components/headers/light";
 // import Footer from "components/footers/FiveColumnWithInputForm.js";
@@ -16,6 +17,8 @@ import ReactModalAdapter from "helpers/ReactModalAdapter";
 // import shopIconImageSrc from "images/shop-icon.svg";
 
 export default () => {
+  const courses = useLoaderData();
+  console.log("courses", courses);
   const Subheading = tw.span`tracking-wider text-sm font-medium`;
   const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
   // const HighlightedTextInverse = tw.span`bg-gray-100 text-primary-500 px-4 transform -skew-x-12 inline-block`;
@@ -23,7 +26,7 @@ export default () => {
   const imageCss = tw`rounded-4xl`;
   return (
     <>
-    <ReactModalAdapter>Hello</ReactModalAdapter>
+      <ReactModalAdapter>Hello</ReactModalAdapter>
       <Hero
         heading={
           <>
@@ -84,19 +87,22 @@ export default () => {
           {
             //imageSrc: shopIconImageSrc,
             title: "Online Courses",
-            description: "Learn Zouk from the beginning in the comfort of your home!",
+            description:
+              "Learn Zouk from the beginning in the comfort of your home!",
             url: "https://#",
           },
           {
             // imageSrc: chefIconImageSrc,
             title: "Workshops",
-            description: "Teaching service in your city or school all over the world!",
+            description:
+              "Teaching service in your city or school all over the world!",
             url: "https://#",
           },
           {
             // imageSrc: celebrationIconImageSrc,
             title: "Private Classes",
-            description: "Intensive training with more focus on you and your dance. ",
+            description:
+              "Intensive training with more focus on you and your dance. ",
             url: "https://#",
           },
         ]}
@@ -149,6 +155,7 @@ export default () => {
             <HighlightedTextInverse>Treact App.</HighlightedTextInverse>
           </>
         }
-      /> */}</>
+      /> */}
+    </>
   );
 };
