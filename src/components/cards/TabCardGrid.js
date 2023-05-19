@@ -130,7 +130,24 @@ export default ({
   },
 }) => {
   const ctx = useContext(CourseContext);
-  console.log("ctx", ctx);
+
+  const template = {
+    Basic: [
+      {
+        imageSrc:
+          "https://static.wixstatic.com/media/c32add_eda5cec34e8044998f09717399dc3d05~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Beginners.png",
+        title: "Beginners Bootcamp",
+        content: "explaining the movement and 5 different variations",
+        price: "€110.00",
+        rating: "5.0",
+        reviews: "87",
+        url: "#",
+      },
+    ],
+  };
+
+  const tabsNew = ctx.courses.map;
+  console.log("tabs", tabsNew);
 
   /*
    * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
@@ -138,6 +155,7 @@ export default ({
    * To see what attributes are configurable of each object inside this array see the example above for "Starters".
    */
   const tabsKeys = Object.keys(tabs);
+  console.log("tabsKeys", tabsKeys);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
 
   return (
