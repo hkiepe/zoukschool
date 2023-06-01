@@ -154,14 +154,14 @@ export default ({
 
   // const tabsKeys = Object.keys(tabs);
   // console.log("tabsKeys", tabsKeys);
-  test = ["A", "B", "C", "A", "C"];
+  const test = ["A", "B", "C", "A", "C"];
 
-  const tabsKeys = test.reduce((accumulator, currentValue) => {
-    console.log("accumulator", accumulator);
+  const tabsKeys = courses.reduce((accumulator, currentValue) => {
+    console.log("accumulator", accumulator.courseLevel);
     console.log("currentValue", currentValue);
-    return accumulator.includes(currentValue)
-      ? accumulator
-      : [...accumulator, currentValue];
+    return !accumulator.includes(currentValue.courseLevel)
+      ? accumulator.courseLevel
+      : [...accumulator, currentValue.courseLevel];
   });
   console.log("tabsKeys", tabsKeys);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
