@@ -129,7 +129,7 @@ export default ({
     Advanced: getRandomCards(),
   },
 }) => {
-  const ctx = useContext(CourseContext);
+  const { courses } = useContext(CourseContext);
 
   const template = {
     Basic: [
@@ -146,17 +146,31 @@ export default ({
     ],
   };
 
-  const tabsNew = ctx.courses.map;
-  console.log("tabs", tabsNew);
-
   /*
    * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
    * as the key and value of the key will be its content (as an array of objects).
    * To see what attributes are configurable of each object inside this array see the example above for "Starters".
    */
-  const tabsKeys = Object.keys(tabs);
+
+  // const tabsKeys = Object.keys(tabs);
+  // console.log("tabsKeys", tabsKeys);
+  test = ["A", "B", "C", "A", "C"];
+
+  const tabsKeys = test.reduce((accumulator, currentValue) => {
+    console.log("accumulator", accumulator);
+    console.log("currentValue", currentValue);
+    return accumulator.includes(currentValue)
+      ? accumulator
+      : [...accumulator, currentValue];
+  });
   console.log("tabsKeys", tabsKeys);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
+
+  const tabsNew = tabsKeys.map((key, index) => {
+    return courses.filter((course, index) => course.courseLevel === key);
+  });
+
+  console.log("tabsNew", tabsNew);
 
   return (
     <Container>
@@ -164,12 +178,13 @@ export default ({
         <HeaderRow>
           <Header>{heading}</Header>
           <TabsControl>
-            {Object.keys(tabs).map((tabName, index) => (
+            {tabsKeys.map((tabName, index) => (
               <TabControl
                 key={index}
                 active={activeTab === tabName}
                 onClick={() => setActiveTab(tabName)}
               >
+                {console.log("tabName", tabName)}
                 {tabName}
               </TabControl>
             ))}
