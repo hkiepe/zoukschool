@@ -130,6 +130,30 @@ export default ({
   },
 }) => {
   const { courses } = useContext(CourseContext);
+  console.log("courses", courses);
+
+  const sortedCourses = courses.reduce((accu, curr) => {
+    // Check if course Level exists in acccu
+    // If yes - just push the course to the level
+    // if not create new Level and push the course
+    console.log("accu", accu);
+    if (Object.keys(accu).includes(curr.courseLevel)) {
+      const { courseLevel, ...rest } = curr;
+      console.log("rest", rest);
+      console.log("accu", accu);
+      // accu[curr.courseLevel].push(rest);
+      return accu[curr.courseLevel].push(rest);
+    } else {
+      console.log("Hello 2");
+      const { courseLevel, ...rest } = curr;
+      // return { [curr.courseLevel]: [rest] };
+      return { ...accu, [curr.courseLevel]: [rest] };
+      return [...accu, curr.courseLevel];
+    }
+    // return accu.includes(curr) ? accu : [...accu, curr];
+  }, {});
+
+  console.log("sortedCourses", sortedCourses);
 
   const template = {
     Basic: [
@@ -152,25 +176,13 @@ export default ({
    * To see what attributes are configurable of each object inside this array see the example above for "Starters".
    */
 
-  // const tabsKeys = Object.keys(tabs);
-  // console.log("tabsKeys", tabsKeys);
-  const test = ["A", "B", "C", "A", "C"];
+  const tabsKeys = [...new Set(courses.map((course) => course.courseLevel))];
 
-  const tabsKeys = courses.reduce((accumulator, currentValue) => {
-    console.log("accumulator", accumulator.courseLevel);
-    console.log("currentValue", currentValue);
-    return !accumulator.includes(currentValue.courseLevel)
-      ? accumulator.courseLevel
-      : [...accumulator, currentValue.courseLevel];
-  });
-  console.log("tabsKeys", tabsKeys);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
 
   const tabsNew = tabsKeys.map((key, index) => {
     return courses.filter((course, index) => course.courseLevel === key);
   });
-
-  console.log("tabsNew", tabsNew);
 
   return (
     <Container>
@@ -184,7 +196,6 @@ export default ({
                 active={activeTab === tabName}
                 onClick={() => setActiveTab(tabName)}
               >
-                {console.log("tabName", tabName)}
                 {tabName}
               </TabControl>
             ))}
