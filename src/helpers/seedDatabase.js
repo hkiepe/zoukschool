@@ -1,6 +1,6 @@
 // fb imports
-import { collection, addDoc, doc, getDoc, setDoc } from "firebase/firestore";
-import { auth, db } from "./firebase-config";
+import { collection, doc, setDoc } from "firebase/firestore";
+import { db } from "./firebase-config";
 
 const data = [
   {

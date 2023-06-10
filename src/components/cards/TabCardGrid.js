@@ -192,7 +192,7 @@ export default ({
               <CardContainer key={index}>
                 <Card
                   className="group"
-                  href={card.url}
+                  href={`courses/${card.courseUrl}`}
                   initial="rest"
                   whileHover="hover"
                   animate="rest"
