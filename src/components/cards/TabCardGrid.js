@@ -10,7 +10,6 @@ import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 import CourseContext from "../../components/store/course-context";
-import beginnerImagePath from "../../images/courseImages/zouk-beginner-course.webp";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -199,9 +198,7 @@ export default ({
                   animate="rest"
                 >
                   <CardImageContainer
-                    imageSrc={
-                      "https://static.wixstatic.com/media/c32add_eda5cec34e8044998f09717399dc3d05~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Beginners.png"
-                    }
+                    imageSrc={`depot/course-images/${card.courseHeaderImage}`}
                   >
                     <CardRatingContainer>
                       <CardRating>

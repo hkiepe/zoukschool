@@ -111,6 +111,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main, { mainLoader } from "./layouts/Main";
 import TutorialsLayout from "./layouts/TutorialsLayout";
 import Error from "components/error/Error";
+import { seedDatabase } from "helpers/seedDatabase";
 
 const router = createBrowserRouter([
   {
@@ -159,6 +160,7 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
+  // seedDatabase();
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 
