@@ -1,5 +1,5 @@
 // React imports
-import React from "react";
+import React, { Context } from "react";
 
 const CourseContext = React.createContext({
   courses: [],
