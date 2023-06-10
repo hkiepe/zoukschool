@@ -1,5 +1,5 @@
 // React imports
-import React, { Context } from "react";
+import React from "react";
 
 const CourseContext = React.createContext({
   courses: [],
@@ -7,13 +7,13 @@ const CourseContext = React.createContext({
 
 export const ContextProvider = (props) => {
   return (
-    <Context.Provider
+    <CourseContext.Provider
       value={{
         courses: [],
       }}
     >
       {props.children}
-    </Context.Provider>
+    </CourseContext.Provider>
   );
 };
 
