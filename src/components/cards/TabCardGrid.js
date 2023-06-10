@@ -10,6 +10,7 @@ import { ReactComponent as StarIcon } from "images/star-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 import CourseContext from "../../components/store/course-context";
+import beginnerImagePath from "../../images/courseImages/zouk-beginner-course.webp";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -68,7 +69,7 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 
 export default ({
   heading = "Checkout our classes",
-  tabs = {
+  /* tabs = {
     Basic: [
       {
         imageSrc:
@@ -127,44 +128,19 @@ export default ({
     ],
     Intermediate: getRandomCards(),
     Advanced: getRandomCards(),
-  },
+  }, */
 }) => {
   const { courses } = useContext(CourseContext);
 
-  const sortedCourses = courses.reduce((accu, curr) => {
+  const tabs = courses.reduce((accu, curr, index) => {
     const { courseLevel, ...rest } = curr;
-    // Check if course Level exists in acccu
-    // If yes - just push the course to the level
-    // if not create new Level and push the course
-    // console.log("accu", accu);
-    // console.log("keys(accu)", Object.keys(accu));
-    console.log("curr.courseLevel", curr.courseLevel);
     if (Object.keys(accu).includes(curr.courseLevel)) {
-      return accu[curr.courseLevel].push(rest);
+      accu[curr.courseLevel].push(rest);
+      return accu;
     } else {
-      // return { [curr.courseLevel]: [rest] };
       return { ...accu, [curr.courseLevel]: [rest] };
-      // return [...accu, curr.courseLevel];
     }
-    // return accu.includes(curr) ? accu : [...accu, curr];
   }, {});
-
-  console.log("sortedCourses", sortedCourses);
-
-  const template = {
-    Basic: [
-      {
-        imageSrc:
-          "https://static.wixstatic.com/media/c32add_eda5cec34e8044998f09717399dc3d05~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Beginners.png",
-        title: "Beginners Bootcamp",
-        content: "explaining the movement and 5 different variations",
-        price: "€110.00",
-        rating: "5.0",
-        reviews: "87",
-        url: "#",
-      },
-    ],
-  };
 
   /*
    * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
@@ -175,10 +151,6 @@ export default ({
   const tabsKeys = [...new Set(courses.map((course) => course.courseLevel))];
 
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
-
-  const tabsNew = tabsKeys.map((key, index) => {
-    return courses.filter((course, index) => course.courseLevel === key);
-  });
 
   return (
     <Container>
@@ -226,13 +198,17 @@ export default ({
                   whileHover="hover"
                   animate="rest"
                 >
-                  <CardImageContainer imageSrc={card.imageSrc}>
+                  <CardImageContainer
+                    imageSrc={
+                      "https://static.wixstatic.com/media/c32add_eda5cec34e8044998f09717399dc3d05~mv2.png/v1/crop/x_0,y_47,w_1080,h_986/fill/w_380,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Beginners.png"
+                    }
+                  >
                     <CardRatingContainer>
                       <CardRating>
                         <StarIcon />
-                        {card.rating}
+                        {card.courseRating}
                       </CardRating>
-                      <CardReview>({card.reviews})</CardReview>
+                      <CardReview>({card.courseReviews})</CardReview>
                     </CardRatingContainer>
                     <CardHoverOverlay
                       variants={{
@@ -251,9 +227,9 @@ export default ({
                     </CardHoverOverlay>
                   </CardImageContainer>
                   <CardText>
-                    <CardTitle>{card.title}</CardTitle>
-                    <CardContent>{card.content}</CardContent>
-                    <CardPrice>{card.price}</CardPrice>
+                    <CardTitle>{card.courseTitle}</CardTitle>
+                    <CardContent>{card.courseShortDescription}</CardContent>
+                    <CardPrice>{card.coursePrice}</CardPrice>
                   </CardText>
                 </Card>
               </CardContainer>
