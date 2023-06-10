@@ -130,25 +130,21 @@ export default ({
   },
 }) => {
   const { courses } = useContext(CourseContext);
-  console.log("courses", courses);
 
   const sortedCourses = courses.reduce((accu, curr) => {
+    const { courseLevel, ...rest } = curr;
     // Check if course Level exists in acccu
     // If yes - just push the course to the level
     // if not create new Level and push the course
-    console.log("accu", accu);
+    // console.log("accu", accu);
+    // console.log("keys(accu)", Object.keys(accu));
+    console.log("curr.courseLevel", curr.courseLevel);
     if (Object.keys(accu).includes(curr.courseLevel)) {
-      const { courseLevel, ...rest } = curr;
-      console.log("rest", rest);
-      console.log("accu", accu);
-      // accu[curr.courseLevel].push(rest);
       return accu[curr.courseLevel].push(rest);
     } else {
-      console.log("Hello 2");
-      const { courseLevel, ...rest } = curr;
       // return { [curr.courseLevel]: [rest] };
       return { ...accu, [curr.courseLevel]: [rest] };
-      return [...accu, curr.courseLevel];
+      // return [...accu, curr.courseLevel];
     }
     // return accu.includes(curr) ? accu : [...accu, curr];
   }, {});
