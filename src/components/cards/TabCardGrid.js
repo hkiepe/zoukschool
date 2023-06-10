@@ -240,7 +240,7 @@ export default ({
   );
 };
 
-/* This function is only there for demo purposes. It populates placeholder cards */
+/* This function is only there for demo purposes. It populates placeholder cards
 const getRandomCards = () => {
   const cards = [
     {
@@ -300,4 +300,4 @@ const getRandomCards = () => {
 
   // Shuffle array
   return cards.sort(() => Math.random() - 0.5);
-};
+}; */

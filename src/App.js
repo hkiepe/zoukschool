@@ -111,7 +111,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main, { mainLoader } from "./layouts/Main";
 import TutorialsLayout from "./layouts/TutorialsLayout";
 import Error from "components/error/Error";
-import { seedDatabase } from "helpers/seedDatabase";
 
 const router = createBrowserRouter([
   {

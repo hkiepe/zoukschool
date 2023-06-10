@@ -7,7 +7,7 @@ import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 import ReactModalAdapter from "helpers/ReactModalAdapter";
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 // import DownloadApp from "components/cta/DownloadApp.js";
 // import Header from "../components/headers/light";
 // import Footer from "components/footers/FiveColumnWithInputForm.js";
